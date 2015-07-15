@@ -1,0 +1,44 @@
+﻿@model ComicsExperiment1.Models.Page
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Page</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageUri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageUri)
+        </dd>
+        <dd>
+            <img src="@Url.Content(Model.ImageUri)" alt="Kittens!" />
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PageNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
